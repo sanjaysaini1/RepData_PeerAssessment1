@@ -4,7 +4,8 @@ output:
   html_document:
     keep_md: true
 ---
-
+Reproducible Research: Peer Assessment 1
+==========================================
 
 ## Loading and preprocessing the data
 ### Read data from activity.csv
@@ -83,6 +84,7 @@ plot(meanperslotdata$steps~meanperslotdata$interval,type="l",xlab="Intervals",yl
 
 ![plot of chunk plotmeanstepsperslot](figure/plotmeanstepsperslot-1.png) 
 
+
 ###Calculate interval that, on average across all the days in the dataset, contains the maximum number of steps.
 
 ```r
@@ -101,6 +103,10 @@ missingvalnum=nrow(data)-nrow(data[complete.cases(data),])
 Number of missing values in the data are 2304.  
 
 ### Create new data with missing values replaced by average number of steps per interval accross all days
+
+We are creating  replacing the missing values witht the average number of steps per interval accross all days  
+
+
 
 ```r
 newdata<-data.frame()
